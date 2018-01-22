@@ -99,7 +99,7 @@
 
 - (NSString *)sub_str:(NSString *)str{
     
-    NSArray *arr = [str componentsSeparatedByString:@"----------------"];
+    NSArray *arr = [str componentsSeparatedByString:@"-------"];
     
     NSLog(@"---------------------%@",arr);
     return [arr objectAtIndex:0];

@@ -13,6 +13,7 @@
 		D760FFCC2014EDDE00C75527 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D760FFCB2014EDDE00C75527 /* UIViewAdditions.m */; };
 		D772EB7F2015C439008188B3 /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D772EB7C2015C439008188B3 /* FCFileManager.m */; };
 		D772EB802015C439008188B3 /* FlLocalStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D772EB7D2015C439008188B3 /* FlLocalStoreManager.m */; };
+		D772EB832015DCA1008188B3 /* HJGBottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D772EB822015DCA1008188B3 /* HJGBottomTableViewCell.m */; };
 		D7A6A95D2014CCA0005B8217 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A6A95C2014CCA0005B8217 /* AppDelegate.m */; };
 		D7A6A9602014CCA0005B8217 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A6A95F2014CCA0005B8217 /* ViewController.m */; };
 		D7A6A9632014CCA0005B8217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A6A9612014CCA0005B8217 /* Main.storyboard */; };
@@ -54,6 +55,8 @@
 		D772EB7C2015C439008188B3 /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		D772EB7D2015C439008188B3 /* FlLocalStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlLocalStoreManager.m; sourceTree = "<group>"; };
 		D772EB7E2015C439008188B3 /* FlLocalStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlLocalStoreManager.h; sourceTree = "<group>"; };
+		D772EB812015DCA1008188B3 /* HJGBottomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJGBottomTableViewCell.h; sourceTree = "<group>"; };
+		D772EB822015DCA1008188B3 /* HJGBottomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJGBottomTableViewCell.m; sourceTree = "<group>"; };
 		D7A6A9582014CCA0005B8217 /* qqq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qqq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A6A95B2014CCA0005B8217 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7A6A95C2014CCA0005B8217 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				D772EB7B2015C439008188B3 /* FCFileManager.h */,
+				D772EB812015DCA1008188B3 /* HJGBottomTableViewCell.h */,
+				D772EB822015DCA1008188B3 /* HJGBottomTableViewCell.m */,
 				D772EB7C2015C439008188B3 /* FCFileManager.m */,
 				D772EB7E2015C439008188B3 /* FlLocalStoreManager.h */,
 				D772EB7D2015C439008188B3 /* FlLocalStoreManager.m */,
@@ -383,6 +388,7 @@
 				D7A6A95D2014CCA0005B8217 /* AppDelegate.m in Sources */,
 				D772EB802015C439008188B3 /* FlLocalStoreManager.m in Sources */,
 				D772EB7F2015C439008188B3 /* FCFileManager.m in Sources */,
+				D772EB832015DCA1008188B3 /* HJGBottomTableViewCell.m in Sources */,
 				D760FFC92014E9A100C75527 /* HJGModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

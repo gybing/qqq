@@ -11,6 +11,7 @@
 #import "HJGModel.h"
 #import <BRPickerView.h>
 #import "FlLocalStoreManager.h"
+#import "HJGBottomTableViewCell.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,11 +27,32 @@
 
 @property (nonatomic, strong) UIButton *cleanBut;
 
+@property (nonatomic, strong) UIView *bottomView;
+
 
 @end
 
 @implementation ViewController
 
+
+- (UIView *)bottomView
+{
+    if (!_bottomView) {
+        UIView * theView = [[UIView alloc] init];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick)];
+        tap.numberOfTapsRequired = 2;
+        [theView addGestureRecognizer:tap];
+        _bottomView = theView;
+    }
+    return _bottomView;
+}
+
+
+- (void)tapClick{
+    
+    [self addButClick];
+    
+}
 
 
 - (UIButton *)cleanBut
@@ -53,7 +75,10 @@
 
 - (void)cleanButClick{
     
-    [FlLocalStoreManager removeUserInfo];
+//    [FlLocalStoreManager removeUserInfo];
+    
+    [self.modelArr removeAllObjects];
+    [self.rootTableView reloadData];
 }
 
 
@@ -154,7 +179,7 @@
     [self rootTableView];
     
     [self cleanBut];
-    [self saveBut];
+//    [self saveBut];
     
     NSLog(@"========================%@",[FlLocalStoreManager getUserInfo]);
     
@@ -172,9 +197,8 @@
         theView.delegate = self;
         theView.dataSource = self;
         [self.view addSubview:theView];
-//        theView.tableHeaderView = [self getHeaderView];
-//        theView.tableHeaderView.height = 100;
         [theView registerClass:[HJGTableViewCell class] forCellReuseIdentifier:@"cell"];
+        [theView registerClass:[HJGBottomTableViewCell class] forCellReuseIdentifier:@"bCell"];
         _rootTableView = theView;
     }
     return _rootTableView;
@@ -193,12 +217,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.modelArr.count;
+    return self.modelArr.count + 1;
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
+    if (indexPath.row == self.modelArr.count) {
+        HJGBottomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bCell"];
+        // 双击的 Recognizer
+        UITapGestureRecognizer * doubleRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(douClick)];
+        doubleRecognizer.numberOfTapsRequired = 2; // 双击
+        //关键语句，给self.view添加一个手势监测；
+        [cell.bottomView addGestureRecognizer:doubleRecognizer];
+        cell.selectionStyle = 0;
+        return cell;
+    }
     
     HJGTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     [cell.firstBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -215,7 +251,13 @@
 //    cell.forthBut.layer.borderColor = RGB(198, 198, 198).CGColor;
 //    cell.fifthBut.layer.borderColor = RGB(198, 198, 198).CGColor;
     cell.preLab.text = [NSString stringWithFormat:@"第%ld局",indexPath.row + 1];
+    cell.selectionStyle = 0;
     return cell;
+}
+
+- (void)douClick{
+    
+    [self addButClick];
 }
 
 - (void)cellClick:(UIButton *)but{
@@ -226,6 +268,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.row == self.modelArr.count) {
+        return 300;
+    }
     return 50;
     
 }
@@ -239,25 +284,26 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
-    return 100;
+    return 150;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    return 60;
+    return 40;
 }
 
 - (UIView *)getHeaderView{
     
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 60)];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 40)];
     view.backgroundColor = [UIColor whiteColor];
-    UILabel *zhuoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, WIDTH - 80, 40)];
+    UILabel *zhuoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, WIDTH - 80, 40)];
     zhuoLab.textAlignment = NSTextAlignmentCenter;
-    zhuoLab.text = @"           桌1       桌2       桌3     桌4     桌5";
+    zhuoLab.text = @"           桌1       桌2      桌3    桌4     桌5";
     [view addSubview:zhuoLab];
     
     
-    UILabel *zhuang = [[UILabel alloc]initWithFrame:CGRectMake(WIDTH - 80, 10, 80, 40)];
+    UILabel *zhuang = [[UILabel alloc]initWithFrame:CGRectMake(WIDTH - 80, 0, 80, 40)];
     zhuang.textAlignment = NSTextAlignmentCenter;
     zhuang.text = @"庄家";
     [view addSubview:zhuang];
@@ -269,12 +315,41 @@
 
 - (void)timeButClick:(UIButton *)but{
     
-    NSArray *arr = @[@"牛1----------------14",@"牛2----------------15",@"牛3----------------16",@"牛4----------------17",@"牛5----------------18",@"牛6----------------19",@"牛7----------------20",@"牛8----------------21",@"牛9----------------22",@"牛牛10----------------23",@"牛牛J----------------24",@"牛牛Q----------------25",@"牛牛K----------------26",@"无牛-K大----------------13",@"无牛-Q大----------------12",@"无牛-J大----------------11",@"无牛-10大----------------10",@"无牛-9大----------------9",@"无牛-8大----------------8",@"无牛-7大----------------7",@"无牛-6大----------------6",@"无牛-5大----------------5",@"无牛-4大----------------4",@"无牛-3大----------------3",@"无牛-2大----------------2",@"无牛-1大----------------1",];
+    NSArray *arr = @[
+                     @"牛1----------------14",
+                     @"牛2----------------15",
+                     @"牛3----------------16",
+                     @"牛4----------------17",
+                     @"牛5----------------18",
+                     @"牛6----------------19",
+                     @"牛7----------------20",
+                     @"牛8----------------21",
+                     @"牛9----------------22",
+                     @"牛牛10----------------23",
+                     @"牛牛J----------------24",
+                     @"牛牛Q----------------25",
+                     @"牛牛K----------------26",
+                     @"无牛-1----------------1",
+                     @"无牛-2----------------2",
+                     @"无牛-3----------------3",
+                     @"无牛-4----------------4",
+                     @"无牛-5----------------5",
+                     @"无牛-6----------------6",
+                     @"无牛-7----------------7",
+                     @"无牛-8----------------8",
+                     @"无牛-9----------------9",
+                     @"无牛-10----------------10",
+                     @"无牛-J----------------11",
+                     @"无牛-Q----------------12",
+                     @"无牛-K----------------13",];
 
     @weakify_self;
     [BRStringPickerView showStringPickerWithTitle:@"飞式牛牛记牌器" dataSource:arr defaultSelValue:@"牛1----------------14" isAutoSelect:NO resultBlock:^(id selectValue) {
         @strongify_self;
 //        NSLog(@"%@",selectValue);
+    
+        
+        
         HJGTableViewCell *cell = (HJGTableViewCell *)[[but superview] superview];
         
         NSIndexPath *indexPa = [self.rootTableView indexPathForCell:cell];

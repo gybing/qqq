@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kDatePicHeight 500
+#define kDatePicHeight 300
 #define kTopViewHeight 44
 
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
