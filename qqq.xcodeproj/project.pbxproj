@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CED557A025708BFFA89BE1B9 /* libPods-qqq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31276443EF479D4D89853D12 /* libPods-qqq.a */; };
+		D73765252014D7CC0059A753 /* HJGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D73765242014D7CC0059A753 /* HJGTableViewCell.m */; };
+		D760FFC92014E9A100C75527 /* HJGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D760FFC82014E9A100C75527 /* HJGModel.m */; };
+		D760FFCC2014EDDE00C75527 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D760FFCB2014EDDE00C75527 /* UIViewAdditions.m */; };
+		D772EB7F2015C439008188B3 /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D772EB7C2015C439008188B3 /* FCFileManager.m */; };
+		D772EB802015C439008188B3 /* FlLocalStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D772EB7D2015C439008188B3 /* FlLocalStoreManager.m */; };
 		D7A6A95D2014CCA0005B8217 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A6A95C2014CCA0005B8217 /* AppDelegate.m */; };
 		D7A6A9602014CCA0005B8217 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A6A95F2014CCA0005B8217 /* ViewController.m */; };
 		D7A6A9632014CCA0005B8217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A6A9612014CCA0005B8217 /* Main.storyboard */; };
@@ -35,6 +41,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31276443EF479D4D89853D12 /* libPods-qqq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-qqq.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D8C0353A8B37FBC054B8212 /* Pods-qqq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qqq.release.xcconfig"; path = "Pods/Target Support Files/Pods-qqq/Pods-qqq.release.xcconfig"; sourceTree = "<group>"; };
+		D73765222014D62F0059A753 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		D73765232014D7CC0059A753 /* HJGTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJGTableViewCell.h; sourceTree = "<group>"; };
+		D73765242014D7CC0059A753 /* HJGTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJGTableViewCell.m; sourceTree = "<group>"; };
+		D760FFC72014E9A100C75527 /* HJGModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJGModel.h; sourceTree = "<group>"; };
+		D760FFC82014E9A100C75527 /* HJGModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJGModel.m; sourceTree = "<group>"; };
+		D760FFCA2014EDDE00C75527 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		D760FFCB2014EDDE00C75527 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		D772EB7B2015C439008188B3 /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
+		D772EB7C2015C439008188B3 /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
+		D772EB7D2015C439008188B3 /* FlLocalStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlLocalStoreManager.m; sourceTree = "<group>"; };
+		D772EB7E2015C439008188B3 /* FlLocalStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlLocalStoreManager.h; sourceTree = "<group>"; };
 		D7A6A9582014CCA0005B8217 /* qqq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qqq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A6A95B2014CCA0005B8217 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7A6A95C2014CCA0005B8217 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +70,7 @@
 		D7A6A97B2014CCA1005B8217 /* qqqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qqqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A6A97F2014CCA1005B8217 /* qqqUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qqqUITests.m; sourceTree = "<group>"; };
 		D7A6A9812014CCA1005B8217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC7769012867BD188F6DB13 /* Pods-qqq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qqq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qqq/Pods-qqq.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED557A025708BFFA89BE1B9 /* libPods-qqq.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +99,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ACEBD8F44172DC86B660150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31276443EF479D4D89853D12 /* libPods-qqq.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8F9E2D82EB28C86BCFD567B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDC7769012867BD188F6DB13 /* Pods-qqq.debug.xcconfig */,
+				4D8C0353A8B37FBC054B8212 /* Pods-qqq.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D7A6A94F2014CCA0005B8217 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +123,8 @@
 				D7A6A9732014CCA1005B8217 /* qqqTests */,
 				D7A6A97E2014CCA1005B8217 /* qqqUITests */,
 				D7A6A9592014CCA0005B8217 /* Products */,
+				C8F9E2D82EB28C86BCFD567B /* Pods */,
+				0ACEBD8F44172DC86B660150 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +141,12 @@
 		D7A6A95A2014CCA0005B8217 /* qqq */ = {
 			isa = PBXGroup;
 			children = (
+				D772EB7B2015C439008188B3 /* FCFileManager.h */,
+				D772EB7C2015C439008188B3 /* FCFileManager.m */,
+				D772EB7E2015C439008188B3 /* FlLocalStoreManager.h */,
+				D772EB7D2015C439008188B3 /* FlLocalStoreManager.m */,
+				D760FFCA2014EDDE00C75527 /* UIViewAdditions.h */,
+				D760FFCB2014EDDE00C75527 /* UIViewAdditions.m */,
 				D7A6A95B2014CCA0005B8217 /* AppDelegate.h */,
 				D7A6A95C2014CCA0005B8217 /* AppDelegate.m */,
 				D7A6A95E2014CCA0005B8217 /* ViewController.h */,
@@ -110,6 +156,11 @@
 				D7A6A9662014CCA0005B8217 /* LaunchScreen.storyboard */,
 				D7A6A9692014CCA0005B8217 /* Info.plist */,
 				D7A6A96A2014CCA0005B8217 /* main.m */,
+				D73765222014D62F0059A753 /* Header.h */,
+				D73765232014D7CC0059A753 /* HJGTableViewCell.h */,
+				D73765242014D7CC0059A753 /* HJGTableViewCell.m */,
+				D760FFC72014E9A100C75527 /* HJGModel.h */,
+				D760FFC82014E9A100C75527 /* HJGModel.m */,
 			);
 			path = qqq;
 			sourceTree = "<group>";
@@ -139,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7A6A9842014CCA1005B8217 /* Build configuration list for PBXNativeTarget "qqq" */;
 			buildPhases = (
+				B328D364C164D953C69EBFBF /* [CP] Check Pods Manifest.lock */,
 				D7A6A9542014CCA0005B8217 /* Sources */,
 				D7A6A9552014CCA0005B8217 /* Frameworks */,
 				D7A6A9562014CCA0005B8217 /* Resources */,
+				886A2E0E59401CB9877E8F5A /* [CP] Embed Pods Frameworks */,
+				A7BED92559E624998E74C509 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,14 +314,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		886A2E0E59401CB9877E8F5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qqq/Pods-qqq-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7BED92559E624998E74C509 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-qqq/Pods-qqq-resources.sh",
+				"${PODS_ROOT}/BRPickerView/BRPickerView/AddressPickerView/BRCity.plist",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qqq/Pods-qqq-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B328D364C164D953C69EBFBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-qqq-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7A6A9542014CCA0005B8217 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D7A6A9602014CCA0005B8217 /* ViewController.m in Sources */,
+				D73765252014D7CC0059A753 /* HJGTableViewCell.m in Sources */,
+				D760FFCC2014EDDE00C75527 /* UIViewAdditions.m in Sources */,
 				D7A6A96B2014CCA0005B8217 /* main.m in Sources */,
 				D7A6A95D2014CCA0005B8217 /* AppDelegate.m in Sources */,
+				D772EB802015C439008188B3 /* FlLocalStoreManager.m in Sources */,
+				D772EB7F2015C439008188B3 /* FCFileManager.m in Sources */,
+				D760FFC92014E9A100C75527 /* HJGModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,29 +544,33 @@
 		};
 		D7A6A9852014CCA1005B8217 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDC7769012867BD188F6DB13 /* Pods-qqq.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV5A8A5FTU;
+				GCC_PREFIX_HEADER = /Users/dev/Downloads/qqq/qqq/Header.h;
 				INFOPLIST_FILE = qqq/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruok.co.qqq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D7A6A9862014CCA1005B8217 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8C0353A8B37FBC054B8212 /* Pods-qqq.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV5A8A5FTU;
+				GCC_PREFIX_HEADER = /Users/dev/Downloads/qqq/qqq/Header.h;
 				INFOPLIST_FILE = qqq/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruok.co.qqq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
