@@ -1,0 +1,89 @@
+{
+  "images" : [
+    {
+      "idiom" : "iphone",
+      "size" : "20x20",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "20x20",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "29x29",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "29x29",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "40x40",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "40x40",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "60x60",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "60x60",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "ios-marketing",
+      "size" : "1024x1024",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "29.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "57.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "58.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "80.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "87.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "114.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "120.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "512.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "1024.png",
+      "unassigned" : true
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

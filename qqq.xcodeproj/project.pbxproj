@@ -552,6 +552,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDC7769012867BD188F6DB13 /* Pods-qqq.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV5A8A5FTU;
 				GCC_PREFIX_HEADER = /Users/dev/Downloads/qqq/qqq/Header.h;
@@ -568,6 +570,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D8C0353A8B37FBC054B8212 /* Pods-qqq.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RV5A8A5FTU;
 				GCC_PREFIX_HEADER = /Users/dev/Downloads/qqq/qqq/Header.h;

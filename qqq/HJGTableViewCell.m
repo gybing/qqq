@@ -101,7 +101,9 @@
     [self compareBut:self.forthBut xianText:model.Number_4 zhuangText:model.Number_zhuang];
     [self compareBut:self.fifthBut xianText:model.Number_5 zhuangText:model.Number_zhuang];
 //    [self compareBut:self.zhuangBut xianText:model.Number_zhuang zhuangText:model.Number_zhuang];
-    
+
+    self.zhuangBut.layer.borderColor = [UIColor greenColor].CGColor;
+
 }
 
 
