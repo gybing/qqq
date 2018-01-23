@@ -95,11 +95,44 @@
         self.lineView.alpha = 0.f;
     }
     
+    [self compareBut:self.firstBut xianText:model.Number_1 zhuangText:model.Number_zhuang];
+    [self compareBut:self.secondBut xianText:model.Number_2 zhuangText:model.Number_zhuang];
+    [self compareBut:self.thirdBut xianText:model.Number_3 zhuangText:model.Number_zhuang];
+    [self compareBut:self.forthBut xianText:model.Number_4 zhuangText:model.Number_zhuang];
+    [self compareBut:self.fifthBut xianText:model.Number_5 zhuangText:model.Number_zhuang];
+//    [self compareBut:self.zhuangBut xianText:model.Number_zhuang zhuangText:model.Number_zhuang];
+    
+}
+
+
+- (void)compareBut:(UIButton *)but xianText:(NSString *)xianText zhuangText:(NSString *)zhuangText
+{
+    
+    if ([xianText containsString:@"----------------"]&&[zhuangText containsString:@"----------------"]) {
+        NSString *xian = [self sub_str2:xianText];
+        NSString *zhuang = [self sub_str2:zhuangText];
+        if ([xian intValue] > [zhuang intValue]) {
+            but.layer.borderColor = [UIColor redColor].CGColor;
+        }else{
+            but.layer.borderColor = RGB(198, 198, 198).CGColor;
+        }
+    }else{
+        but.layer.borderColor = RGB(198, 198, 198).CGColor;
+    }
+    
+}
+
+- (NSString *)sub_str2:(NSString *)str{
+    
+    NSArray *arr = [str componentsSeparatedByString:@"----------------"];
+    
+    NSLog(@"---------------------%@",arr);
+    return [arr objectAtIndex:1];
 }
 
 - (NSString *)sub_str:(NSString *)str{
     
-    NSArray *arr = [str componentsSeparatedByString:@"-------"];
+    NSArray *arr = [str componentsSeparatedByString:@"----------------"];
     
     NSLog(@"---------------------%@",arr);
     return [arr objectAtIndex:0];

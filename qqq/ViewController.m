@@ -237,13 +237,37 @@
     }
     
     HJGTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    [cell.firstBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.secondBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.thirdBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.forthBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.fifthBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.sixBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.zhuangBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.firstBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.secondBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.thirdBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.forthBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.fifthBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+////    [cell.sixBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.zhuangBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    [cell.firstBut addTarget:self action:@selector(doubleClick:forEvent:) forControlEvents:UIControlEventTouchDownRepeat];
+    [cell.firstBut  addTarget:self action:@selector(singleClick:forEvent:) forControlEvents:UIControlEventTouchDown];
+    
+    [cell.secondBut addTarget:self action:@selector(doubleClick:forEvent:) forControlEvents:UIControlEventTouchDownRepeat];
+    [cell.secondBut  addTarget:self action:@selector(singleClick:forEvent:) forControlEvents:UIControlEventTouchDown];
+    
+    
+    [cell.thirdBut addTarget:self action:@selector(doubleClick:forEvent:) forControlEvents:UIControlEventTouchDownRepeat];
+    [cell.thirdBut  addTarget:self action:@selector(singleClick:forEvent:) forControlEvents:UIControlEventTouchDown];
+    
+    
+    [cell.forthBut addTarget:self action:@selector(doubleClick:forEvent:) forControlEvents:UIControlEventTouchDownRepeat];
+    [cell.forthBut  addTarget:self action:@selector(singleClick:forEvent:) forControlEvents:UIControlEventTouchDown];
+    
+    
+    [cell.fifthBut addTarget:self action:@selector(doubleClick:forEvent:) forControlEvents:UIControlEventTouchDownRepeat];
+    [cell.fifthBut  addTarget:self action:@selector(singleClick:forEvent:) forControlEvents:UIControlEventTouchDown];
+    
+    [cell.zhuangBut addTarget:self action:@selector(doubleClick:forEvent:) forControlEvents:UIControlEventTouchDownRepeat];
+    [cell.zhuangBut  addTarget:self action:@selector(singleClick:forEvent:) forControlEvents:UIControlEventTouchDown];
+    
+    
     cell.model = [self.modelArr objectAtIndex:indexPath.row];
 //    cell.firstBut.layer.borderColor = RGB(198, 198, 198).CGColor;
 //    cell.secondBut.layer.borderColor = RGB(198, 198, 198).CGColor;
@@ -254,6 +278,50 @@
     cell.selectionStyle = 0;
     return cell;
 }
+
+
+-(void)singleClick:(UIButton *)button forEvent:(UIEvent *)event{
+    
+    [self performSelector:@selector(cellClick:) withObject:button afterDelay:0.2];
+    
+}
+
+-(void)doubleClick:(UIButton *)button forEvent:(UIEvent *)event
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(cellClick:) object:button];
+    
+    NSLog(@"双击操作");
+    
+    button.layer.borderColor  = RGB(198, 198, 198).CGColor;
+    [button setTitle:@"" forState:UIControlStateNormal];
+    
+    HJGTableViewCell *cell = (HJGTableViewCell *)[[button superview] superview];
+    
+    NSIndexPath *indexPa = [self.rootTableView indexPathForCell:cell];
+    
+    HJGModel *model = [self.modelArr objectAtIndex:indexPa.row];
+    
+    if (button.tag == 1) {
+        model.Number_1 = @"";
+    }else if (button.tag == 2){
+        model.Number_2 = @"";
+    }else if (button.tag == 3){
+        model.Number_3 = @"";
+    }else if (button.tag == 4){
+        model.Number_4 = @"";
+    }else if (button.tag == 5){
+        model.Number_5 = @"";
+    }else if (button.tag == 6){
+        model.Number_6 = @"";
+    }else if (button.tag == 7){
+        model.Number_zhuang = @"";
+        NSLog(@"000000_%@",model.Number_zhuang);
+
+    }
+    
+    [self.rootTableView reloadData];
+}
+
 
 - (void)douClick{
     
